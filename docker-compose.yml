@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  litespeed-exporter:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /tmp/lshttpd/:/tmp/lshttpd/
+    ports:
+      - 9777:9777
